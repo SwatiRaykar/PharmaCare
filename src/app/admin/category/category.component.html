@@ -1,0 +1,33 @@
+<div class="maindiv">
+<div id="title">
+    <h2>Add Category</h2>
+  </div>
+  <hr>
+
+  <!-- import reactive form module -->
+  <form action="#" method="post" [formGroup]="CategoryForm"> 
+
+       
+    <div class="form-group" [class.error]="CategoryForm.controls['Name'].dirty && CategoryForm.hasError('required','Name')" >
+      <label class="required" for="Name">Category Name:</label>
+      <input formControlName="Name" type="text" name="Name" id="Name" placeholder="Category Name" />
+    </div>
+    <small *ngIf="CategoryForm.controls['Name'].dirty && CategoryForm.hasError('required','Name')" style="color: red;">*Category Name is required</small>
+ 
+
+    <div class="form-group" [class.error]="CategoryForm.controls['Status'].dirty && CategoryForm.hasError('required','Status')" >
+    <label  for="status" class=" status1 required">Status:
+      <label>
+        <input formControlName="Status" type="radio"  value="Active" /> 
+        Active
+      </label>
+      <label>
+        <input formControlName="Status" type="radio"  value="Inactive"  /> 
+        Inactive
+      </label>
+        </label>
+    </div>
+      
+    <button  (click)="onAddCategory()" type="submit" class="bttn">Save</button>
+    </form> 
+</div>

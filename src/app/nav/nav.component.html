@@ -1,0 +1,60 @@
+
+
+  <nav >
+    <ul >
+      <li class="logo" [routerLinkActive]="'active'" [routerLink]="'home'"> <img  [routerLink]="['/products']"
+              src="../../assets/PharmaCareImages/navLogo.png"
+              alt="Logo not found"
+            /><span id="dotin">PharmaCare</span>
+          </li>
+          
+        
+          <li class="hideOnMobile"  id="Search">
+            <input type="text" placeholder="Search Products "   >
+            <span><i class=" fa fa-search "></i></span>
+          </li>
+
+        <li class="hideOnMobile" id="language" [routerLinkActive]="'active'">
+          <a href="#"  [routerLink]="'Products'">AllProducts<i class="fa fa-sort-desc" aria-hidden="true">         
+          </i></a>
+        </li>
+
+        <li class="hideOnMobile" id="language" [routerLinkActive]="'active'">
+          <a href="#">Services<i class="fa fa-sort-desc" aria-hidden="true">         
+          </i></a>
+        </li>
+
+        <li class="hideOnMobile" id="accList" [routerLinkActive]="'active'">
+          <!-- <h6 >signin <p>Welcome, {{ userName }}</p></h6> -->
+          <ng-container *ngIf="userName; else signIn">
+            <h6>Welcome, {{ userName }}</h6>
+          </ng-container>
+          <ng-template #signIn>
+            <a class="ngTemp">Sign In<i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+          </ng-template>
+          
+          <div class="dropdown-content" id="pb">
+            <div class="dropdown-content2"><button [routerLinkActive]="'active'" [routerLink]="'login'">Sign in</button>
+             
+            <p>New customer?<a href="#" [routerLinkActive]="'active'" [routerLink]="'sign-up'">Start here.</a></p>
+          </div><hr>
+          </div>
+      </li>
+
+       
+        <li class="hideOnMobile" id="acart" [routerLinkActive]="'active'">
+          <a [routerLink]="['cart']" (click)="navigateToCart()">Cart({{ cartCount }})<img src="https://icon-library.com/images/white-shopping-cart-icon/white-shopping-cart-icon-9.jpg" alt=""></a>
+        </li>
+      </ul>
+      <!-- <li [routerLinkActive]="'active'"><a [routerLink]="'contact-us'">CONTACT</a></li> -->
+      <!-- <button  type="button" id="loginBtn" *ngIf="!isLoggedIn" (click)="navigateToLogin()" >LOGIN</button> --> 
+  </nav>
+
+ 
+
+
+
+<!-- <div ><br>
+  <app-login (WelcomeUser)="OnAddedUsername($event)" (CustomerId)="OnSendUserId($event)" (ClosedLogin)="OnCloseLogin($event)" class="LPopup" id="logPopup"  [ngClass]="{openloginpopup:isclicked===true}"  ></app-login>
+</div>   -->
+    

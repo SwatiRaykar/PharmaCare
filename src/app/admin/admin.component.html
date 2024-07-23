@@ -1,0 +1,62 @@
+
+  <div class="admin-layout">
+    <nav class="sidebar">
+        <h4>Admin</h4>
+        <ul>
+          
+            <li><a routerLink="/admin/dashboard">Dashboard</a></li>
+
+            <li id="homeicon"><img src="https://icon-library.com/images/home-icon-white/home-icon-white-11.jpg" alt="" ></li>
+            
+            <li id="custicon"><img src="https://www.citypng.com/public/uploads/preview/download-people-users-white-icon-png-11639591484xtzgxd1be2.png" alt="Customers" title="Customers"
+              routerLink="/admin/customers" (click)="navigateToCustomers()">
+              <div class="dropdown-content" >
+                <ul>
+                  <li [routerLinkActive]="'active'" [routerLink]="['customers']" (click)="navigateToCustomers()">View all users</li>
+                  <li>Block the user</li>
+                </ul>
+              </div>
+            </li>
+
+            <li><img id="category" src="../../assets/PharmaCareImages/category.png" alt="category" title="category"
+              routerLink="/admin/category">
+              <div class="dropdown-content" >
+                <ul>
+                  <li [routerLinkActive]="'active'" [routerLink]="['category']">Add Category</li>
+                  <li [routerLinkActive]="'active'" [routerLink]="['products/category-list']">Category List</li>
+                </ul>
+              </div>
+            </li>
+            
+            <li id="producticon"><img src="../../assets/PharmaCareImages/capsules.png" alt="Products" title="Products"
+              [routerLink]="['/admin/products']" (click)="navigateToProducts()" >
+              <div class="dropdown-content" >
+                <ul>
+                  <li [routerLinkActive]="'active'" [routerLink]="['products']" (click)="navigateToProducts()">Show All Products</li>
+                  <li [routerLinkActive]="'active'" [routerLink]="['products/add-Product']">Add new Product</li>
+                </ul>
+              </div>
+            </li>
+
+            <li><img id="orders" src="https://icon-library.com/images/my-orders-icon/my-orders-icon-0.jpg" alt="Orders" title="Orders"
+              routerLink="/admin/orders" (click)="navigateToOrders()" >
+              <div class="dropdown-content" >
+                <ul>
+                  <li  [routerLinkActive]="'active'" [routerLink]="['orders']" (click)="navigateToOrders()">Show All orders</li>
+                  <!-- <li>Add new Product</li> -->
+                </ul>
+              </div>
+            </li>
+            
+            <li id="saleproduct" routerLink="/admin/sale-products"><img  routerLinkActive="active-link" src="../../assets/PharmaCareImages/money.png" alt="Sale products" title="Sale"></li>
+          
+            <li id="setting"><img src="https://icon-library.com/images/white-settings-icon/white-settings-icon-1.jpg" alt="Setting"
+              routerLink="/admin/settings" title="Setting"></li>
+           
+        </ul>
+    </nav>
+    <div class="admin-content">
+        <router-outlet></router-outlet>
+      </div>
+</div>
+  

@@ -1,0 +1,27 @@
+<div class="main-div">
+
+<div class="sale-nav">
+
+    <ul class="first">
+        <li id="lines3">
+        <div class="div1 "></div>
+        <div class="div2 "></div>
+        <div class="div3 "></div>
+       </li>
+        <li routerLinkActive="active-link" [routerLink]="['sale-products/newsale']">New Sale</li>
+        <li >Todays sale</li>
+    </ul>
+    <ul  class="second">
+        <li ><img src="https://www.seekpng.com/png/full/137-1372092_calculators-calculator-icon-png.png" alt=""></li>
+        <li ><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3247957/notification-icon-md.png" alt=""></li>
+        <li ><img src="https://cdn.pixabay.com/photo/2014/04/02/10/24/warning-303768_960_720.png" alt=""></li>
+        <li ><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3197007/person-plus-icon-md.png" alt=""></li>
+    </ul>
+    
+</div> <!-- sale-nav end-->
+
+<div class="sale-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

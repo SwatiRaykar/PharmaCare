@@ -1,0 +1,72 @@
+
+ul{
+   display: flex; 
+   
+}
+
+ul li{
+    list-style: none;
+    padding: 7px;
+    margin: 7px;
+}
+ .second{
+    display: flex;
+    margin-left:48vw ;
+    align-items: flex-end;
+}
+.second li{
+    background-color: rgb(244, 244, 241);
+
+}
+.sale-nav {
+    display: flex;
+    margin-left: -130px;
+    width: 100vw;
+    background-color: rgb(252, 253, 252);
+}
+.sale-nav .first {
+    align-items: flex-start;
+}
+
+.sale-nav .first li.active-link{
+    background-color: green;
+}
+.sale-nav .first li  {
+padding: 10px; 
+ }
+.first li.active-link   {
+    background-color: green; /* Active button background color */
+  }
+ul #lines3{
+display: flex;
+flex-direction: column;
+}
+ul #lines3 div{
+    margin: 2px;
+    background-color: rgb(28, 163, 28);
+    height: 2px;  
+}
+ul #lines3 .div1{
+  width: 10px;
+}
+ul #lines3 .div2{
+    width: 18px;
+}
+ ul #lines3 .div3{
+    width: 14px;
+}
+ul li img{
+height: 25px;
+}
+
+
+/* ......Outlet Styling..... */
+.sale-content{
+    height: 100%;
+    /* width: 100%; */
+    margin-top: 0;
+    margin-left: -130px;
+    position: absolute;
+    background-color: rgb(241, 244, 244);
+}
+

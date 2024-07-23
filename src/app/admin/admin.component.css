@@ -1,0 +1,152 @@
+
+.admin-layout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 70px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar h4{
+  font-size: 17px;
+margin-left: -15px;
+}
+.sidebar ul{
+  margin-left: -15px;
+  }
+.logo {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.logo img{
+  height: 120px;
+  width: 150px;
+  margin-left: -70px;
+  margin-top: -50px;
+}
+#dotin{
+  color: rgb(30, 242, 7);
+  font-size: 16px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: -15px;
+  z-index: 5;
+  }
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -30px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+.sidebar ul li:first-child {
+  font-size:14px ;
+  margin: 15px 0;
+}
+#homeicon img,#custicon img,
+#category,#saleproduct img,#setting img{
+  height: 40px;
+}
+#orders{
+  height: 30px;
+}
+#saleproduct img,#producticon img{
+  height: 50px; 
+}
+#custicon img,#homeicon img{
+  height: 45px; 
+}
+#saleproduct img{
+  margin-left: 18px;
+}
+.sidebar ul li img{
+opacity: 0.7;
+margin-left: 20px;
+padding: 10px;
+border-radius: 10px;
+}
+#category,#orders{
+  height: 45px;
+  margin-left: 20px;
+  padding: 0px;
+}
+ li img.active-link   {
+  background-color: green; /* Active button background color */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.admin-content {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 200px;
+    position: absolute;
+    background-color: rgb(247, 248, 248);
+    z-index: 1;
+}
+
+
+/* dropdown */
+.dropdown-content  {
+    display: none;
+    background-color: #34495e;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    overflow:visible;
+    width: 15vw;
+    height: 100px;
+  }
+  .dropdown-content ul{
+    text-decoration: none;
+    display: block;
+    
+  }
+  .dropdown-content ul li{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    /* display: inline; */
+    z-index: 2;
+
+  }
+  .dropdown-content ul li a{
+    cursor: pointer;
+    z-index: 2;
+
+  }
+
+  .dropdown-content ul li:hover{
+    background-color: rgb(45, 60, 81);
+  }
+  li:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 46, 62);
+  }
+ 
